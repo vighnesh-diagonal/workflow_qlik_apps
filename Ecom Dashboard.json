@@ -24,6 +24,11 @@ VARIABLES
 {"qName":"vProposerID","qDefinition":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"041a76aa-88ea-4a77-b65e-092454de063f","qType":"variable"},"qData":[]}
 {"qName":"vReviewerID","qDefinition":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"aa7f14d5-b0da-4a9e-9c98-de71b72f76fc","qType":"variable"},"qData":[]}
 {"qName":"vCurrentUserID","qDefinition":"=Right(osuser(), (Len(osuser()) - Index(osuser(), '=', -1)))","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"09d5249b-0113-4825-a04f-900890f5269c","qType":"variable"},"qData":[]}
+{"qName":"vOriginSpaceName","qDefinition":"personal","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"62de2fba-57bf-4b30-9a45-5abea8a2309b","qType":"variable"},"qData":[]}
+{"qName":"vTargetSpaceName","qDefinition":"Sales Prod","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"d7681058-a966-48b6-afe9-e20305b05818","qType":"variable"},"qData":[]}
+{"qName":"vProposer","qDefinition":"Vighnesh Gawad","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"6e696f77-1110-4b95-91c5-8a46d1d5fd0b","qType":"variable"},"qData":[]}
+{"qName":"vReviewer","qDefinition":"Vighnesh Gawad","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"27b74dcc-0e66-433b-a808-4cc762272853","qType":"variable"},"qData":[]}
+{"qName":"vApprovalAutomation","qDefinition":"https:\/\/diagonal.ap.qlikcloud.com\/api\/v1\/automations\/2667e4d8-2c99-4b31-87ae-cece586a2e11\/actions\/execute?X-Execution-Token=OlGmwI390IawREbPhbX2aifj3uR9bxgOSv6zUy4AksRmuAyUSMys8yg18YuAAwh6&originAppId=7bc4f96c-6af3-4d5a-a0ff-bfb30794ff82&appId=6ac34cc7-ca5d-4e28-b428-26393661ab2a&ownerEmail=vighnesh@diagonal.ai&spaceId=67ce87fadace16b2f6e557c1&approveReject=Approved&userName=Vighnesh Gawad&originOwner=Yx2AY9D-aoqwgsC0sKfFwqdrYz_NjTRh&originSpace=personal&Level=L1","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"8f80b964-0959-4bd9-b438-b10acb5aeaca","qType":"variable"},"qData":[]}
 
 FIELDS
 {"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":12,"qTags":["$key","$hidden","$system","$ascii","$text"],"qSrcTables":[]}
