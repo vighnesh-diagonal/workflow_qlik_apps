@@ -21,14 +21,9 @@ MEASURES
 VARIABLES
 {"qName":"vSpaceType","qDefinition":"=GetSysAttr('spaceType')","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"de4e4419-4448-4d4a-b158-9516c7903c4c","qType":"variable"},"qData":[]}
 {"qName":"vSpaceName","qDefinition":"=GetSysAttr('spaceName')","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"6c08cd77-276a-46b2-9832-0a14dd453a1e","qType":"variable"},"qData":[]}
-{"qName":"vOriginSpaceName","qDefinition":"personal","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"5cafa69d-9500-49ad-ba0a-b4c63d7b2654","qType":"variable"},"qData":[]}
-{"qName":"vTargetSpaceName","qDefinition":"Sales Prod","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"245f8129-dbc1-446f-875d-1c68c340a8b2","qType":"variable"},"qData":[]}
-{"qName":"vProposer","qDefinition":"Vighnesh Gawad","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"28b4fb69-3935-48ae-ba2f-92f0d7f1c21f","qType":"variable"},"qData":[]}
-{"qName":"vReviewer","qDefinition":"Vighnesh Gawad","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"58cbe8f1-cfd7-4b8c-b8d8-6f65c2467069","qType":"variable"},"qData":[]}
 {"qName":"vProposerID","qDefinition":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"041a76aa-88ea-4a77-b65e-092454de063f","qType":"variable"},"qData":[]}
 {"qName":"vReviewerID","qDefinition":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"aa7f14d5-b0da-4a9e-9c98-de71b72f76fc","qType":"variable"},"qData":[]}
 {"qName":"vCurrentUserID","qDefinition":"=Right(osuser(), (Len(osuser()) - Index(osuser(), '=', -1)))","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"09d5249b-0113-4825-a04f-900890f5269c","qType":"variable"},"qData":[]}
-{"qName":"vApprovalAutomation","qDefinition":"https:\/\/diagonal.ap.qlikcloud.com\/api\/v1\/automations\/2667e4d8-2c99-4b31-87ae-cece586a2e11\/actions\/execute?X-Execution-Token=OlGmwI390IawREbPhbX2aifj3uR9bxgOSv6zUy4AksRmuAyUSMys8yg18YuAAwh6&originAppId=7bc4f96c-6af3-4d5a-a0ff-bfb30794ff82&appId=01a0d8c3-e9d7-4979-bc54-f5040978ea41&ownerEmail=vighnesh@diagonal.ai&spaceId=67ce87fadace16b2f6e557c1&approveReject=Approved&userName=Vighnesh Gawad&originOwner=Yx2AY9D-aoqwgsC0sKfFwqdrYz_NjTRh&originSpace=personal&Level=L1","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"dcbc5f9d-787c-4c1b-90fc-78d42e9247f8","qType":"variable"},"qData":[]}
 
 FIELDS
 {"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":12,"qTags":["$key","$hidden","$system","$ascii","$text"],"qSrcTables":[]}
