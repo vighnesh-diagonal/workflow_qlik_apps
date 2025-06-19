@@ -1,0 +1,344 @@
+///$tab Main
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyThousandSep=',';
+SET MoneyDecimalSep='.';
+SET MoneyFormat='$ ###0.00;-$ ###0.00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='M/D/YYYY';
+SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='en-US';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
+SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December';
+SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
+SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday';
+SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y';
+
+///$tab Masters
+[DistrictMaster]:
+LOAD
+    DistrictCode,
+    DistrictName as "District Name"
+FROM [lib://DataFiles/Masters.xlsx]
+(ooxml, embedded labels, header is 1 lines, table is LocationMaster);
+
+BlockMaster: 
+LOAD
+    BlockCode,
+    BlockName  as "Block Name"
+FROM [lib://DataFiles/Masters.xlsx]
+(ooxml, embedded labels, header is 1 lines, table is LocationMaster);
+
+
+PanchayatMaster: 
+LOAD
+ClusterCode as PanchayatCode,
+    ClusterName as "Cluster Name"
+FROM [lib://DataFiles/Masters.xlsx]
+(ooxml, embedded labels, header is 1 lines, table is LocationMaster);
+
+
+CLF_Master:
+LOAD
+    clfCode as CLF_Code,
+    VOName as "VO Name"
+FROM [lib://DataFiles/Masters.xlsx]
+(ooxml, embedded labels, table is CLF_Master);
+
+LocationMaster:
+LOAD 
+VillageCode,
+VillageName as "Village Name"
+FROM [lib://DataFiles/Masters.xlsx]
+(ooxml, embedded labels, header is 1 lines, table is LocationMaster);
+
+SHGMaster:
+LOAD
+    GroupCode,
+    Group_Name as "Group Name"
+FROM [lib://DataFiles/Masters.xlsx]
+(ooxml, embedded labels, table is SHGMaster);
+
+
+CadreDesignation:
+LOAD
+    text(trim(CadreTypeId)) as CadreTypeID,
+    Cadre_Designation as "Cadre Designation"
+FROM [lib://DataFiles/CBS.xlsx]
+(ooxml, embedded labels, header is 1 lines, table is Sheet1);
+
+
+///$tab Cad_reg
+CBS_cadre_reg:
+LOAD
+    ID,
+    num(CadreId) as CadreId,
+//     DistrictCode,
+//     BlockCode,
+    
+    trim(ClusterCode) as ClusterCode,
+    
+    DistrictCode & '|' & 
+    BlockCode & '|' & 
+//     trim(ClusterCode) & '|' &
+    IFSC_Code & '|' & 
+    UserID   as Cadre_Reg_Key, 
+//     num(VillageCode) as VillageCode,
+    CadreName as "Cadre Name",
+    CadreType,
+    Aadhar_Pic,
+    VoterIDNO,
+    NodalSHG_VO,
+    NodalSHG_Code,
+    NodalVO_Code,
+    Nodal_PresidentNo,
+    Nodal_SecretaryNo,
+    Nodal_TreasrurNo,
+    BankCode,
+    BranchCode,
+    IFSC_Code,
+    BankPassCheckCopy,
+    Tab_IMEI_No,
+    SIM_IMSI_No,
+    entrySIMMobileNO,
+    DateOfRegisteration,
+    Status as RegStatus,
+    StatusDate,
+    Remark,
+    "UserID",
+    "Password",
+    if(Gender = 'M', 'Male',
+    if(Gender = 'F', 'Female', 'Others')) as Gender,
+    Caste_category,
+    FatherName,
+    PGCode,
+    UserName,
+    PanCardNo,
+    PanCardCopy,
+    CLFCode,
+    Education,
+    Scheme,
+    PrimaryNodal,
+//     CreatedOn,
+    RSCCode,
+    FPCCode,
+    ILDCCode,
+    CABICCode,
+    InName,
+    DateOfRegisteration1,
+    TransferFlag,
+    CLFName,
+    CLF_Code,
+    CLF_IFSC,
+    Regtype
+FROM [lib://DataFiles/CBS_cadre_reg.csv]
+(txt, utf8, embedded labels, delimiter is ',', msq);
+
+
+// exit Script;
+
+///$tab Payment_BK
+CBS_cadre_payment:
+LOAD
+	'BK' as PaymentFlag,
+    DistrictCode & '|' & 
+    BlockCode & '|' &
+    num(VillageCode,'00') as LocKey,
+    
+    DistrictCode & '|' & 
+    BlockCode & '|' & 
+    IFSC & '|' & 
+    UserId  as Cadre_Reg_Key,
+    
+    
+    Id,
+    DistrictCode,
+    BlockCode,
+    PanchayatCode,
+    num(VillageCode) as VillageCode,
+    "UserId",
+    MobileNo,
+    num(IMEINo, '00') as IMEINo,
+    GroupCode,
+    MettingNoCount,
+//     "Month",
+//     "Year",
+     date(floor(Num(Date#(Num("Month", '00') & "Year", 'MMYYYY')))) as DateKey,
+    DueAmount,
+   num( RecommendedAmount) as RecommendedAmount,
+   RecommendedAmountDate as RecommendedAmountDate, // only time is there
+    PaidAmount,
+   PaidAmountDate as PaidAmountDate, // only time is there
+    Amt_Recommended_BPM,
+    Status,
+    Proces_CreatedBy,
+    date(date#(Process_CreatedOn , 'DD-MM-YYYY')) as Process_Created_Date, // date
+    SendDM,
+    date(date#(SendDMDate , 'DD-MM-YYYY')) as SendDMDate, // date
+    RecommendedBy_DM,
+    SendDMMU,
+    Recommend_CreatedBy,
+    date(date#(Recommend_CreatedOn, 'DD-MM-YYYY')) as Recommend_Created_Date,
+    Batch_Id,
+    RejectFlag,
+    Remarks,
+    COOFlag,
+    SendFinance,
+     date(date#( COO_CreatedOn, 'DD-MM-YYYY')) as COO_Created_Date,
+//       alt(num(SendDM),0) + alt(num(SendDMMU),0) + alt(num(@25),0) as TotalDelay,
+    MailFlag,
+    Payment_ID,
+    CreatedOn,
+    flagMIS,
+    IFSC,
+if(IsNull(trim(InstitutionName)) or (len(InstitutionName) = 0), 'Null', InstitutionName) as "Institution Name",
+    BankName,
+    ErrorMsg,
+    SuperBatchNo,
+    SupBatchCreationDate, // date
+    PayUpdateStatusDate, // date
+    PayUpdateStatus as  PayUpdateStatusCode,
+    If(PayUpdateStatus = 'NULL', 'Not Updated',
+    If(PayUpdateStatus = 1, 'Done',
+        If(PayUpdateStatus = 2, 'Pending', 'Unknown'))) as PayUpdateStatus,
+
+    SBatchCBY,
+    text(trim(CadreTypeID)) as CadreTypeID
+//     MPR_No,
+FROM [lib://DataFiles/CBS_cadre_payment_BK.csv]
+(txt, utf8, embedded labels, delimiter is ',', msq)
+where Year<=2024;
+
+
+///$tab Payment_Others
+CBS_cadre_payment_others:
+LOAD
+	'Others' as PaymentFlag,
+    DistrictCode & '|' & 
+    BlockCode & '|' &
+    num(VillageCode,'00') as LocKey,
+    
+     DistrictCode & '|' & 
+    BlockCode & '|' & 
+//     PanchayatCode & '|' & 
+    IFSC & '|' & 
+    UserId as Cadre_Reg_Key,
+    Id,
+    DistrictCode,
+    BlockCode,
+    PanchayatCode,
+    VillageCode,
+    "UserId",
+    MobileNo,
+    IMEINo,
+    GroupCode,
+    MettingNoCount,
+    //     "Month",
+//     "Year",
+     date(floor(Num(Date#(Num("Month", '00') & "Year", 'MMYYYY')))) as DateKey,
+    DueAmount,
+    RecommendedAmount,
+    RecommendedAmountDate as RecommendedAmountDate, // this is null
+    PaidAmount,
+    date(date#(PaidAmountDate)) as PaidAmountDate,
+    Amt_Recommended_BPM,
+    Status,
+    Proces_CreatedBy,
+   date(date#(Process_CreatedOn , 'DD-MM-YYYY')) as Process_Created_Date, // date
+    SendDM,
+    date(date#(SendDMDate , 'DD-MM-YYYY')) as SendDMDate, // date
+    RecommendedBy_DM,
+    SendDMMU,
+    Recommend_CreatedBy,
+   date(date#(Recommend_CreatedOn, 'DD-MM-YYYY')) as Recommend_Created_Date,
+    Batch_Id,
+    RejectFlag,
+    Remarks,
+    COOFlag,
+    SendFinance,
+     date(date#( COO_CreatedOn, 'DD-MM-YYYY')) as COO_Created_Date,
+    MailFlag,
+    Payment_ID,
+    CreatedOn,
+    flagMIS,
+    
+text(trim(CadreTypeID)) as CadreTypeID,
+    
+    IFSC,
+    if(IsNull(trim(InstitutionName)) or (len(InstitutionName) = 0), 'Null', InstitutionName) as "Institution Name",
+    BankName,
+    ErrorMsg,
+    SuperBatchNo,
+    SupBatchCreationDate,
+    PayUpdateStatusDate,
+       PayUpdateStatus as  PayUpdateStatusCode,
+    If(PayUpdateStatus = 'NULL', 'Not Updated',
+    If(PayUpdateStatus = 1, 'Done',
+        If(PayUpdateStatus = 2, 'Pending', 'Unknown'))) as PayUpdateStatus,
+    SBatchCBY
+//     ,
+//     UploadFile,
+//     CBSRegID,
+//     LetterNo
+FROM [lib://DataFiles/CBS_cadre_payment_others.csv]
+(txt, utf8, embedded labels, delimiter is ',', msq)
+where Year<=2024;
+
+// exit Script;
+///$tab DateBridge
+DateBridge:
+Load distinct
+Date(DateKey) AS DateBridgeKey,
+'DateKey' AS DateType,
+[Cadre_Reg_Key]  
+Resident CBS_cadre_payment;
+
+Load distinct
+date(date#(DateOfRegisteration,'DD-MM-YYYY')) AS DateBridgeKey,
+'Registered Date' AS DateType,
+Cadre_Reg_Key  
+Resident CBS_cadre_reg 
+where date(date#(DateOfRegisteration,'DD-MM-YYYY')) <= '31/12/2024';
+///$tab Master Calendar
+MasterCalendar: 
+Load 
+// date(TempDate) AS DateKey,
+date(TempDate) AS DateBridgeKey,
+date(TempDate)  as DisplayDate,
+Day(TempDate)  As Day,
+ 
+Dual('Q' & ceil(month(TempDate) / 3),ceil(month(TempDate) / 3)) as Quarter,
+Dual('Q' & ceil(month(TempDate) / 3)&' '&Date(TempDate,'YY'),ceil(month(TempDate) / 3)&' '&QuarterStart(TempDate)) 	as QuarterYear,
+ 
+Month(TempDate) 							as Month, 
+Date(MonthStart(TempDate),'MMM-YY') 			as MonthYear,
+Date(MonthStart(TempDate),'MMM-YY') 			as MonthYear2,
+ 
+Date(MonthStart(TempDate),'MMM-YY')				as MonthYearNum, 
+Year(TempDate)  As Year,
+ 
+Left(Year(Yearname(TempDate,0,4)),5)&'-'&Right(Year(Yearname(TempDate,0,4))+1,2)  AS [Fiscal Year],
+;
+ 
+//=== Generate a temp table of dates === 
+LOAD 
+date(mindate + IterNo()) AS TempDate
+,maxdate // Used in InYearToDate() above, but not kept 
+WHILE mindate + IterNo() <= maxdate;
+// LOAD 
+//  date(maxdate - IterNo()+1) AS TempDate
+//  ,mindate // Used in InYearToDate() above, but not kept 
+// WHILE maxdate - IterNo() + 1 >= mindate;
+ 
+//=== Get min/max dates from Field ===/
+LOAD
+min(FieldValue('DateKey', recno()))-1 as mindate,
+max(FieldValue('DateKey', recno())) as maxdate
+AUTOGENERATE FieldValueCount('DateKey');
+///$tab Exit
+exit Script;
