@@ -1,0 +1,169 @@
+
+SHEETS
+{"qInfo":{"qId":"7884769e-c5db-4abb-9bc9-d6e3538583c1","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"7884769e-c5db-4abb-9bc9-d6e3538583c1","approved":false,"published":true,"owner":"auth0|591822e5b38ab4686468308802e04c3c57f0e9b2d8b5a607474871aeca782aac","ownerId":"680888201aa2458120dcbba1","createdDate":"2025-05-14T09:15:36.290Z","modifiedDate":"2025-06-19T09:41:17.851Z","encrypted":true,"publishTime":"2025-05-14T09:20:43.322Z","title":"Payment Analysis and Monitoring","description":"","privileges":["read","publish"]},"qData":[]}
+{"qInfo":{"qId":"58b6c9bc-857c-4962-884d-969a64bba897","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"58b6c9bc-857c-4962-884d-969a64bba897","approved":false,"published":true,"publishTime":"2025-05-14T10:25:24.623Z","owner":"auth0|591822e5b38ab4686468308802e04c3c57f0e9b2d8b5a607474871aeca782aac","ownerId":"680888201aa2458120dcbba1","createdDate":"2025-05-14T10:19:23.692Z","modifiedDate":"2025-05-14T10:25:53.178Z","encrypted":true,"title":"Cadre Activity And Payment Status","description":"","privileges":["read","publish"]},"qData":[]}
+
+OBJECTS ON SHEETS
+{"name":"25d2779f-6f8a-48aa-97ab-02f9d49993cf","type":"barchart","col":0,"row":1,"colspan":9,"rowspan":5,"bounds":{"x":0,"y":5.5555555555555545,"width":37.5,"height":27.777777777777786}}
+{"name":"dcc7951c-9fb5-44d8-9536-b8934c093b7c","type":"linechart","col":0,"row":6,"colspan":16,"rowspan":6,"bounds":{"x":0,"y":33.333333333333336,"width":66.66666666666666,"height":33.333333333333336}}
+{"name":"08901bde-884b-46e6-85c6-e36f1991f56f","type":"barchart","col":16,"row":5,"colspan":8,"rowspan":7,"bounds":{"x":66.66666666666666,"y":27.777777777777786,"width":33.33333333333333,"height":38.88888888888889}}
+{"name":"caa727e1-92fa-424a-b560-80f7ccaf3085","type":"combochart","col":9,"row":1,"colspan":7,"rowspan":5,"bounds":{"x":37.5,"y":5.5555555555555545,"width":29.166666666666668,"height":27.777777777777786}}
+{"name":"8d88d344-432a-486f-9bae-561d877d8119","type":"kpi","col":16,"row":1,"colspan":4,"rowspan":4,"bounds":{"x":66.66666666666666,"y":5.5555555555555545,"width":16.666666666666664,"height":22.222222222222218}}
+{"name":"08b366d6-1f9e-4526-91cd-56d0bdea9f7b","type":"kpi","col":20,"row":1,"colspan":4,"rowspan":4,"bounds":{"x":83.33333333333334,"y":5.5555555555555545,"width":16.666666666666664,"height":22.222222222222218}}
+{"name":"3084bcae-9ddc-49f8-a04a-d4aebe055b92","type":"filterpane","col":0,"row":0,"colspan":6,"rowspan":1,"bounds":{"x":0,"y":0,"width":25,"height":5.5555555555555545}}
+{"name":"42c7ff2b-03eb-4eb7-950d-c597b420fa8a","type":"filterpane","col":6,"row":0,"colspan":6,"rowspan":1,"bounds":{"x":25,"y":0,"width":25,"height":5.5555555555555545}}
+{"name":"0ba36b07-26ea-4f02-b554-0cbe464ac78d","type":"filterpane","col":12,"row":0,"colspan":6,"rowspan":1,"bounds":{"x":50,"y":0,"width":25,"height":5.5555555555555545}}
+{"name":"a80efb40-0069-4667-aad1-afa1aff0526e","type":"filterpane","col":18,"row":0,"colspan":6,"rowspan":1,"bounds":{"x":75,"y":0,"width":25,"height":5.5555555555555545}}
+{"name":"vMJuW","type":"CheckerFlow","col":0,"row":12,"colspan":12,"rowspan":6,"bounds":{"x":0,"y":66.66666666666667,"width":50,"height":33.333333333333336}}
+{"name":"869e5e38-a0e8-48d5-a72e-75ef384ec41b","type":"kpi","col":0,"row":1,"colspan":5,"rowspan":2,"bounds":{"y":8.333333333333332,"x":0,"width":20.833333333333336,"height":16.666666666666664}}
+{"name":"c7788730-0ec0-4957-92d2-cbabe252cfa4","type":"kpi","col":5,"row":1,"colspan":5,"rowspan":2,"bounds":{"y":8.333333333333332,"x":20.833333333333336,"width":20.833333333333336,"height":16.666666666666664}}
+{"name":"ee87ff3a-6b1b-4cfa-b470-124211d2c0a7","type":"kpi","col":10,"row":1,"colspan":5,"rowspan":2,"bounds":{"y":8.333333333333332,"x":41.66666666666667,"width":20.833333333333336,"height":16.666666666666664}}
+{"name":"69f5f289-bc02-4f92-815b-e85803e9c6ef","type":"kpi","col":15,"row":1,"colspan":5,"rowspan":2,"bounds":{"y":8.333333333333332,"x":62.5,"width":20.833333333333336,"height":16.666666666666664}}
+{"name":"716e2df8-b7a0-49cc-811f-2db7eb78568f","type":"kpi","col":20,"row":1,"colspan":4,"rowspan":2,"bounds":{"y":8.333333333333332,"x":83.33333333333334,"width":16.666666666666664,"height":16.666666666666664}}
+{"name":"6fa360c0-cbb9-46e9-9f6e-878e27a6d96d","type":"linechart","col":10,"row":8,"colspan":14,"rowspan":4,"bounds":{"y":66.66666666666666,"x":41.66666666666667,"width":58.333333333333336,"height":33.33333333333333}}
+{"name":"a36ccb25-4fe4-445b-b494-730114fa81b4","type":"barchart","col":10,"row":3,"colspan":7,"rowspan":5,"bounds":{"y":25,"x":41.66666666666667,"width":29.166666666666668,"height":41.66666666666667}}
+{"name":"41dca525-04ac-40a2-81fa-2cb90549c1f7","type":"map","col":0,"row":3,"colspan":10,"rowspan":9,"bounds":{"y":25,"x":0,"width":41.66666666666667,"height":75}}
+{"name":"5194029e-b299-4f04-a2eb-31fc459467b1","type":"filterpane","col":0,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":0,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"c16fe2b5-ae44-46f8-94cf-0508fe77d9a6","type":"filterpane","col":4,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":16.666666666666664,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"952b4c5d-34c2-41be-88e4-5e2edbb7c8c6","type":"filterpane","col":8,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":33.33333333333333,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"f2041f0b-552f-4a6d-bd20-54d079af821d","type":"filterpane","col":12,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":50,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"29f61f24-11f3-4fa0-abd4-69d33143f794","type":"filterpane","col":16,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":66.66666666666666,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"41f3191f-bf9b-46cc-83b6-0236cc4db29a","type":"filterpane","col":20,"row":0,"colspan":4,"rowspan":1,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":8.333333333333332}}
+{"name":"cff1d0c2-a5fc-4975-93c8-61877a200fae","type":"piechart","col":17,"row":3,"colspan":7,"rowspan":5,"bounds":{"y":25,"x":70.83333333333334,"width":29.166666666666668,"height":41.66666666666667}}
+
+DIMENSIONS
+{"qInfo":{"qId":"PUMPaL","qType":"dimension"},"qMeta":{"_resourcetype":"app.object","_objecttype":"dimension","id":"PUMPaL","approved":false,"published":false,"owner":"auth0|591822e5b38ab4686468308802e04c3c57f0e9b2d8b5a607474871aeca782aac","ownerId":"680888201aa2458120dcbba1","createdDate":"2025-05-14T06:55:37.189Z","modifiedDate":"2025-05-14T06:55:37.189Z","encrypted":true,"privileges":["read","update","delete","publish"],"title":"District Name","description":"","tags":[]},"qData":[]}
+
+MEASURES
+
+VARIABLES
+{"qName":"vSpaceName","qDefinition":"='My App Space'","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"101d810e-3fb8-446a-8d53-d44bbbeb9330","qType":"variable"},"qData":[]}
+{"qName":"vSpaceType","qDefinition":"=GetSysAttr('spaceType')","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"67c8d674-6454-418a-81cb-bfdd7bce46ab","qType":"variable"},"qData":[]}
+{"qName":"vCurrentUserID","qDefinition":"='Pratiksha Dakare'","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"f331c4a6-a49c-4579-8a40-ca0b79cf84d9","qType":"variable"},"qData":[]}
+{"qName":"vReviewerID","qDefinition":"='Pqr'","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c57ee115-ccc9-4ad7-8bd7-043237ce85c0","qType":"variable"},"qData":[]}
+{"qName":"vProposerID","qDefinition":"='Pratiksha Dakare'","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"82eb3ead-b602-4e30-973a-6b09a13903e0","qType":"variable"},"qData":[]}
+
+FIELDS
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":117,"qTags":["$key","$hidden","$system","$ascii","$text"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Table","qCardinal":11,"qTags":["$key","$hidden","$system","$ascii","$text"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Rows","qCardinal":8,"qTags":["$hidden","$system","$numeric","$integer"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Fields","qCardinal":5,"qTags":["$hidden","$system","$numeric","$integer"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$FieldNo","qCardinal":50,"qTags":["$hidden","$system","$numeric","$integer"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Info","qCardinal":1,"qTags":["$hidden","$system","$ascii","$text"],"qSrcTables":[]}
+{"qName":"DistrictCode","qCardinal":24,"qTags":["$key","$numeric","$integer"],"qSrcTables":["DistrictMaster","CBS_cadre_payment"]}
+{"qName":"District Name","qCardinal":24,"qTags":["$ascii","$text"],"qSrcTables":["DistrictMaster"]}
+{"qName":"BlockCode","qCardinal":264,"qTags":["$key","$numeric","$integer"],"qSrcTables":["BlockMaster","CBS_cadre_payment"]}
+{"qName":"Block Name","qCardinal":260,"qTags":["$ascii","$text"],"qSrcTables":["BlockMaster"]}
+{"qName":"PanchayatCode","qCardinal":4395,"qTags":["$key"],"qSrcTables":["PanchayatMaster","CBS_cadre_payment"]}
+{"qName":"Cluster Name","qCardinal":3947,"qTags":["$ascii","$text"],"qSrcTables":["PanchayatMaster"]}
+{"qName":"CLF_Code","qCardinal":629,"qTags":["$key"],"qSrcTables":["CLF_Master","CBS_cadre_reg"]}
+{"qName":"VO Name","qCardinal":283,"qTags":["$ascii","$text"],"qSrcTables":["CLF_Master"]}
+{"qName":"VillageCode","qCardinal":31888,"qTags":["$key"],"qSrcTables":["LocationMaster","CBS_cadre_payment"]}
+{"qName":"Village Name","qCardinal":22556,"qTags":["$ascii","$text"],"qSrcTables":["LocationMaster"]}
+{"qName":"GroupCode","qCardinal":85681,"qTags":["$key"],"qSrcTables":["SHGMaster","CBS_cadre_payment"]}
+{"qName":"Group Name","qCardinal":33877,"qTags":["$text"],"qSrcTables":["SHGMaster"]}
+{"qName":"CadreTypeID","qCardinal":83,"qTags":["$key","$ascii","$text"],"qSrcTables":["CadreDesignation","CBS_cadre_payment"]}
+{"qName":"Cadre Designation","qCardinal":83,"qTags":["$ascii","$text"],"qSrcTables":["CadreDesignation"]}
+{"qName":"ID","qCardinal":27955,"qTags":["$numeric","$integer"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"CadreId","qCardinal":21616,"qTags":["$numeric","$integer"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"ClusterCode","qCardinal":820,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Cadre_Reg_Key","qCardinal":50624,"qTags":["$key","$text"],"qSrcTables":["CBS_cadre_reg","CBS_cadre_payment","DateBridge"]}
+{"qName":"Cadre Name","qCardinal":15253,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"CadreType","qCardinal":78,"qTags":["$numeric","$integer"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Aadhar_Pic","qCardinal":27611,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"VoterIDNO","qCardinal":644,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"NodalSHG_VO","qCardinal":13,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"NodalSHG_Code","qCardinal":225,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"NodalVO_Code","qCardinal":526,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Nodal_PresidentNo","qCardinal":6994,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Nodal_SecretaryNo","qCardinal":6594,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Nodal_TreasrurNo","qCardinal":5564,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"BankCode","qCardinal":28,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"BranchCode","qCardinal":560,"qTags":["$numeric","$integer"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"IFSC_Code","qCardinal":447,"qTags":["$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"BankPassCheckCopy","qCardinal":27609,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Tab_IMEI_No","qCardinal":94,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"SIM_IMSI_No","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"entrySIMMobileNO","qCardinal":1944,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"DateOfRegisteration","qCardinal":450,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"RegStatus","qCardinal":4,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"StatusDate","qCardinal":1306,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Remark","qCardinal":380,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"UserID","qCardinal":26497,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Password","qCardinal":18673,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Gender","qCardinal":3,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Caste_category","qCardinal":5,"qTags":["$numeric","$integer"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"FatherName","qCardinal":19492,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"PGCode","qCardinal":3309,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"UserName","qCardinal":18961,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"PanCardNo","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"PanCardCopy","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"CLFCode","qCardinal":107,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Education","qCardinal":11,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Scheme","qCardinal":11,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"PrimaryNodal","qCardinal":4576,"qTags":[],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"RSCCode","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"FPCCode","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"ILDCCode","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"CABICCode","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"InName","qCardinal":6457,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"DateOfRegisteration1","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"TransferFlag","qCardinal":1,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"CLFName","qCardinal":535,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"CLF_IFSC","qCardinal":105,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"Regtype","qCardinal":2,"qTags":["$numeric","$integer"],"qSrcTables":["CBS_cadre_reg"]}
+{"qName":"PaymentFlag","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"LocKey","qCardinal":134,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"Id","qCardinal":351390,"qTags":["$numeric","$integer"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"UserId","qCardinal":19318,"qTags":["$numeric","$integer"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"MobileNo","qCardinal":2048,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"IMEINo","qCardinal":52,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"MettingNoCount","qCardinal":551,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"DateKey","qCardinal":84,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"DueAmount","qCardinal":603,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"RecommendedAmount","qCardinal":577,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"RecommendedAmountDate","qCardinal":4157,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"PaidAmount","qCardinal":4882,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"PaidAmountDate","qCardinal":387,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"Amt_Recommended_BPM","qCardinal":5007,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"Status","qCardinal":3,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"Proces_CreatedBy","qCardinal":158,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"Process_Created_Date","qCardinal":1600,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"SendDM","qCardinal":3,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"SendDMDate","qCardinal":1421,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"RecommendedBy_DM","qCardinal":86,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"SendDMMU","qCardinal":2,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"Recommend_CreatedBy","qCardinal":18,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"Recommend_Created_Date","qCardinal":1135,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"Batch_Id","qCardinal":6613,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"RejectFlag","qCardinal":3,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"Remarks","qCardinal":42,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"COOFlag","qCardinal":2,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"SendFinance","qCardinal":2,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"COO_Created_Date","qCardinal":1133,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"MailFlag","qCardinal":2,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"Payment_ID","qCardinal":325701,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"CreatedOn","qCardinal":1514,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"flagMIS","qCardinal":2,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"IFSC","qCardinal":261,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"Institution Name","qCardinal":4416,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"BankName","qCardinal":20,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"ErrorMsg","qCardinal":2,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"SuperBatchNo","qCardinal":5690,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"SupBatchCreationDate","qCardinal":172,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"PayUpdateStatusDate","qCardinal":4658,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"PayUpdateStatusCode","qCardinal":3,"qTags":[],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"PayUpdateStatus","qCardinal":3,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"SBatchCBY","qCardinal":59,"qTags":["$ascii","$text"],"qSrcTables":["CBS_cadre_payment"]}
+{"qName":"DateBridgeKey","qCardinal":2563,"qTags":["$key","$numeric","$integer","$timestamp","$date"],"qSrcTables":["DateBridge","MasterCalendar"]}
+{"qName":"DateType","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["DateBridge"]}
+{"qName":"DisplayDate","qCardinal":2527,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["MasterCalendar"]}
+{"qName":"Day","qCardinal":31,"qTags":["$numeric","$integer"],"qSrcTables":["MasterCalendar"]}
+{"qName":"Quarter","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["MasterCalendar"]}
+{"qName":"QuarterYear","qCardinal":28,"qTags":["$ascii","$text"],"qSrcTables":["MasterCalendar"]}
+{"qName":"Month","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["MasterCalendar"]}
+{"qName":"MonthYear","qCardinal":84,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["MasterCalendar"]}
+{"qName":"MonthYear2","qCardinal":84,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["MasterCalendar"]}
+{"qName":"MonthYearNum","qCardinal":84,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["MasterCalendar"]}
+{"qName":"Year","qCardinal":7,"qTags":["$numeric","$integer"],"qSrcTables":["MasterCalendar"]}
+{"qName":"Fiscal Year","qCardinal":8,"qTags":["$ascii","$text"],"qSrcTables":["MasterCalendar"]}
