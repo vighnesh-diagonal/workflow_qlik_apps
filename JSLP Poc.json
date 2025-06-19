@@ -1,9 +1,21 @@
 
 SHEETS
+{"qInfo":{"qId":"476cafe1-6660-402d-a6c2-add7d033d3bf","qType":"sheet"},"qMeta":{"title":"Payment Analysis and Monitoring (1)","description":"","_resourcetype":"app.object","_objecttype":"sheet","id":"476cafe1-6660-402d-a6c2-add7d033d3bf","approved":false,"published":false,"owner":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","ownerId":"Yx2AY9D-aoqwgsC0sKfFwqdrYz_NjTRh","createdDate":"2025-06-19T11:41:57.937Z","modifiedDate":"2025-06-19T11:41:57.937Z","privileges":["read","update","delete","publish","change_owner"]},"qData":[]}
 {"qInfo":{"qId":"7884769e-c5db-4abb-9bc9-d6e3538583c1","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"7884769e-c5db-4abb-9bc9-d6e3538583c1","approved":false,"published":true,"owner":"auth0|591822e5b38ab4686468308802e04c3c57f0e9b2d8b5a607474871aeca782aac","ownerId":"680888201aa2458120dcbba1","createdDate":"2025-05-14T09:15:36.290Z","modifiedDate":"2025-06-19T09:41:17.851Z","encrypted":true,"publishTime":"2025-05-14T09:20:43.322Z","title":"Payment Analysis and Monitoring","description":"","privileges":["read","publish"]},"qData":[]}
 {"qInfo":{"qId":"58b6c9bc-857c-4962-884d-969a64bba897","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"58b6c9bc-857c-4962-884d-969a64bba897","approved":false,"published":true,"publishTime":"2025-05-14T10:25:24.623Z","owner":"auth0|591822e5b38ab4686468308802e04c3c57f0e9b2d8b5a607474871aeca782aac","ownerId":"680888201aa2458120dcbba1","createdDate":"2025-05-14T10:19:23.692Z","modifiedDate":"2025-05-14T10:25:53.178Z","encrypted":true,"title":"Cadre Activity And Payment Status","description":"","privileges":["read","publish"]},"qData":[]}
 
 OBJECTS ON SHEETS
+{"name":"18d7aa6c-7d5c-4e46-9913-e71019c9eb63","type":"barchart","col":0,"row":1,"colspan":9,"rowspan":5,"bounds":{"x":0,"y":5.5555555555555545,"width":37.5,"height":27.777777777777786}}
+{"name":"dd4b3dac-dcd7-4a2f-b76c-4b226811d138","type":"linechart","col":0,"row":6,"colspan":16,"rowspan":6,"bounds":{"x":0,"y":33.333333333333336,"width":66.66666666666666,"height":33.333333333333336}}
+{"name":"aefa1ca2-78e6-4f18-99e3-f071e9ab0b10","type":"barchart","col":16,"row":5,"colspan":8,"rowspan":7,"bounds":{"x":66.66666666666666,"y":27.777777777777786,"width":33.33333333333333,"height":38.88888888888889}}
+{"name":"c441232a-dd5d-410c-b619-02f7859a800d","type":"combochart","col":9,"row":1,"colspan":7,"rowspan":5,"bounds":{"x":37.5,"y":5.5555555555555545,"width":29.166666666666668,"height":27.777777777777786}}
+{"name":"970ad4fa-9332-4bb9-8243-a7e8c2a5c8bc","type":"kpi","col":16,"row":1,"colspan":4,"rowspan":4,"bounds":{"x":66.66666666666666,"y":5.5555555555555545,"width":16.666666666666664,"height":22.222222222222218}}
+{"name":"fd56e1ce-6bd1-4920-a353-a8d83d400ded","type":"kpi","col":20,"row":1,"colspan":4,"rowspan":4,"bounds":{"x":83.33333333333334,"y":5.5555555555555545,"width":16.666666666666664,"height":22.222222222222218}}
+{"name":"3e07e787-2d20-47bf-8e21-42ca1e40df9a","type":"filterpane","col":0,"row":0,"colspan":6,"rowspan":1,"bounds":{"x":0,"y":0,"width":25,"height":5.5555555555555545}}
+{"name":"039dc6c4-adaf-4967-9aed-8d44ce01d630","type":"filterpane","col":6,"row":0,"colspan":6,"rowspan":1,"bounds":{"x":25,"y":0,"width":25,"height":5.5555555555555545}}
+{"name":"0ddb3a77-5d14-424c-9bbc-91a3c9d68365","type":"filterpane","col":12,"row":0,"colspan":6,"rowspan":1,"bounds":{"x":50,"y":0,"width":25,"height":5.5555555555555545}}
+{"name":"fc5c515c-ed59-46f3-8a45-5f287b9073ac","type":"filterpane","col":18,"row":0,"colspan":6,"rowspan":1,"bounds":{"x":75,"y":0,"width":25,"height":5.5555555555555545}}
+{"name":"f93c00ce-7695-4f38-8ebd-c6cfbbee85c9","type":"CheckerFlow","col":0,"row":12,"colspan":12,"rowspan":6,"bounds":{"x":0,"y":66.66666666666667,"width":50,"height":33.333333333333336}}
 {"name":"25d2779f-6f8a-48aa-97ab-02f9d49993cf","type":"barchart","col":0,"row":1,"colspan":9,"rowspan":5,"bounds":{"x":0,"y":5.5555555555555545,"width":37.5,"height":27.777777777777786}}
 {"name":"dcc7951c-9fb5-44d8-9536-b8934c093b7c","type":"linechart","col":0,"row":6,"colspan":16,"rowspan":6,"bounds":{"x":0,"y":33.333333333333336,"width":66.66666666666666,"height":33.333333333333336}}
 {"name":"08901bde-884b-46e6-85c6-e36f1991f56f","type":"barchart","col":16,"row":5,"colspan":8,"rowspan":7,"bounds":{"x":66.66666666666666,"y":27.777777777777786,"width":33.33333333333333,"height":38.88888888888889}}
@@ -37,11 +49,16 @@ DIMENSIONS
 MEASURES
 
 VARIABLES
-{"qName":"vSpaceName","qDefinition":"='My App Space'","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"101d810e-3fb8-446a-8d53-d44bbbeb9330","qType":"variable"},"qData":[]}
+{"qName":"vSpaceName","qDefinition":"='S10. Admin Review'","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"101d810e-3fb8-446a-8d53-d44bbbeb9330","qType":"variable"},"qData":[]}
 {"qName":"vSpaceType","qDefinition":"=GetSysAttr('spaceType')","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"67c8d674-6454-418a-81cb-bfdd7bce46ab","qType":"variable"},"qData":[]}
-{"qName":"vCurrentUserID","qDefinition":"='Pratiksha Dakare'","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"f331c4a6-a49c-4579-8a40-ca0b79cf84d9","qType":"variable"},"qData":[]}
-{"qName":"vReviewerID","qDefinition":"='Pqr'","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c57ee115-ccc9-4ad7-8bd7-043237ce85c0","qType":"variable"},"qData":[]}
-{"qName":"vProposerID","qDefinition":"='Pratiksha Dakare'","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"82eb3ead-b602-4e30-973a-6b09a13903e0","qType":"variable"},"qData":[]}
+{"qName":"vCurrentUserID","qDefinition":"=Right(osuser(), (Len(osuser()) - Index(osuser(), '=', -1)))","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"f331c4a6-a49c-4579-8a40-ca0b79cf84d9","qType":"variable"},"qData":[]}
+{"qName":"vReviewerID","qDefinition":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c57ee115-ccc9-4ad7-8bd7-043237ce85c0","qType":"variable"},"qData":[]}
+{"qName":"vProposerID","qDefinition":"auth0|591822e5b38ab4686468308802e04c3c57f0e9b2d8b5a607474871aeca782aac","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"82eb3ead-b602-4e30-973a-6b09a13903e0","qType":"variable"},"qData":[]}
+{"qName":"vOriginSpaceName","qDefinition":"personal","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"a13dd08c-5a5e-4302-ac3b-88c534fa3d29","qType":"variable"},"qData":[]}
+{"qName":"vTargetSpaceName","qDefinition":"Sales Prod","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"27f43e45-5c98-42ab-becd-17d3539b1d78","qType":"variable"},"qData":[]}
+{"qName":"vProposer","qDefinition":"Pratiksha Dakare","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"65b9d84f-9d1b-41c7-ab81-87950fd1149b","qType":"variable"},"qData":[]}
+{"qName":"vReviewer","qDefinition":"Vighnesh Gawad","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"4ce9167f-bc5d-4650-9f40-8e86f7422583","qType":"variable"},"qData":[]}
+{"qName":"vApprovalAutomation","qDefinition":"https:\/\/diagonal.ap.qlikcloud.com\/api\/v1\/automations\/2667e4d8-2c99-4b31-87ae-cece586a2e11\/actions\/execute?X-Execution-Token=OlGmwI390IawREbPhbX2aifj3uR9bxgOSv6zUy4AksRmuAyUSMys8yg18YuAAwh6&originAppId=96ece163-52d4-4b6e-a1ff-2a62c5a459a3&appId=8c76d851-30c5-4096-9f76-e141c19610d0&ownerEmail=pratiksha.dakare@diagonal.ai&spaceId=67ce87fadace16b2f6e557c1&approveReject=Approved&userName=Pratiksha Dakare&originOwner=680888201aa2458120dcbba1&originSpace=personal&Level=L1","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"30131d8f-a559-4d7d-8302-c2fac529fe5e","qType":"variable"},"qData":[]}
 
 FIELDS
 {"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":117,"qTags":["$key","$hidden","$system","$ascii","$text"],"qSrcTables":[]}
