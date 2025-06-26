@@ -1,0 +1,352 @@
+///$tab Main
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyThousandSep=',';
+SET MoneyDecimalSep='.';
+SET MoneyFormat='$ ###0.00;-$ ###0.00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='M/D/YYYY';
+SET TimestampFormat='M/D/YYYY h:mm:ss[.fff] TT';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='en-US';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
+SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December';
+SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
+SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday';
+SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y';
+
+
+
+
+
+///$tab Section 4
+// Load Region Table
+
+bikeshare_regions:
+LOAD
+    region_id,
+    name AS region_name
+FROM [lib://DataFiles/bikeshare_regions.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ',', msq);
+
+
+// Load Station Info Table (Start Station)
+
+start_station_info:
+LOAD
+    station_id AS start_station_id,
+    name AS start_station_name_dim,
+    lat AS start_lat,
+    lon AS start_lon,
+    region_id AS start_region_id,
+    station_geom AS start_geom
+FROM [lib://DataFiles/bikeshare_station_info.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ',', msq);
+
+
+// Load Station Info Table (End Station)
+
+end_station_info:
+LOAD
+    station_id AS end_station_id,
+    name AS end_station_name_dim,
+    lat AS end_lat,
+    lon AS end_lon,
+    region_id AS end_region_id,
+    station_geom AS end_geom
+FROM [lib://DataFiles/bikeshare_station_info.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ',', msq);
+
+
+// Load Main Trips Table
+
+bikeshare_trips:
+LOAD
+    trip_id,
+    duration_sec,
+    Timestamp#(Left(start_date,19),'YYYY-MM-DD hh:mm:ss') as start_date,
+    Timestamp#(Left(end_date,19),'YYYY-MM-DD hh:mm:ss') as end_date,
+
+    WeekDay(Timestamp#(Left(start_date,19),'YYYY-MM-DD hh:mm:ss')) as start_weekday,
+    Hour(Timestamp#(Left(start_date,19),'YYYY-MM-DD hh:mm:ss')) as start_hour,
+	Date(
+  		If(
+   			Timestamp#(Left(start_date,19),'YYYY-MM-DD hh:mm:ss') <= Timestamp#(Left(end_date,19),'YYYY-MM-DD hh:mm:ss'),
+    		Floor(Timestamp#(Left(start_date,19),'YYYY-MM-DD hh:mm:ss')),
+    		Floor(Timestamp#(Left(end_date,19),'YYYY-MM-DD hh:mm:ss'))
+  )
+) AS DateKey,
+
+    start_station_id,
+    end_station_id,
+    bike_number,
+    zip_code,
+    subscriber_type,
+    c_subscription_type,
+    member_birth_year,
+    member_gender,
+    bike_share_for_all_trip,
+    start_station_latitude,
+    start_station_longitude,
+    end_station_latitude,
+    end_station_longitude
+FROM [lib://DataFiles/bikeshare_trips 2.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ',', msq);
+
+
+// Join Start Region
+
+LEFT JOIN (start_station_info)
+LOAD
+    region_id AS start_region_id,
+    region_name AS start_region_name
+RESIDENT bikeshare_regions;
+
+// Join End Region
+
+LEFT JOIN (end_station_info)
+LOAD
+    region_id AS end_region_id,
+    region_name AS end_region_name
+RESIDENT bikeshare_regions;
+
+DROP TABLE bikeshare_regions;
+
+///$tab Master Calendar
+MasterCalendar: 
+Load 
+date(TempDate) AS DateKey,
+date(TempDate) AS DateBridgeKey,
+date(TempDate)  as DisplayDate,
+Day(TempDate)  As Day,
+ 
+Dual('Q' & ceil(month(TempDate) / 3),ceil(month(TempDate) / 3)) as Quarter,
+Dual('Q' & ceil(month(TempDate) / 3)&' '&Date(TempDate,'YY'),ceil(month(TempDate) / 3)&' '&QuarterStart(TempDate)) 	as QuarterYear,
+ 
+Month(TempDate) 							as Month, 
+Date(MonthStart(TempDate),'MMM-YY') 			as MonthYear,
+Date(MonthStart(TempDate),'MMM-YY') 			as MonthYear2,
+ 
+Date(MonthStart(TempDate),'MMM-YY')				as MonthYearNum, 
+Year(TempDate)  As Year,
+ 
+Left(Year(Yearname(TempDate,0,4)),5)&'-'&Right(Year(Yearname(TempDate,0,4))+1,2)  AS [Fiscal Year],
+;
+ 
+//=== Generate a temp table of dates === 
+LOAD 
+date(mindate + IterNo()) AS TempDate
+,maxdate // Used in InYearToDate() above, but not kept 
+WHILE mindate + IterNo() <= maxdate;
+// LOAD 
+//  date(maxdate - IterNo()+1) AS TempDate
+//  ,mindate // Used in InYearToDate() above, but not kept 
+// WHILE maxdate - IterNo() + 1 >= mindate;
+ 
+//=== Get min/max dates from Field ===/
+LOAD
+min(FieldValue('DateKey', recno()))-1 as mindate,
+max(FieldValue('DateKey', recno())) as maxdate
+AUTOGENERATE FieldValueCount('DateKey');
+///$tab Section 5
+exit Script;
+///$tab Section
+// In the Load Script, create a flag for first trip date per user
+// Add a user key (if you have subscriber id or so, use that, else combine birth year + gender as proxy)
+
+bikeshare_trips_with_user:
+LOAD *,
+     member_birth_year & '_' & member_gender AS user_key;
+LOAD
+    trip_id,
+    duration_sec,
+    Timestamp#(Left(start_date,19),'YYYY-MM-DD hh:mm:ss') as start_date,
+    Timestamp#(Left(end_date,19),'YYYY-MM-DD hh:mm:ss') as end_date,
+    Date(
+        If(
+            Timestamp#(Left(start_date,19),'YYYY-MM-DD hh:mm:ss') <= Timestamp#(Left(end_date,19),'YYYY-MM-DD hh:mm:ss'),
+            Floor(Timestamp#(Left(start_date,19),'YYYY-MM-DD hh:mm:ss')),
+            Floor(Timestamp#(Left(end_date,19),'YYYY-MM-DD hh:mm:ss'))
+        )
+    ) AS DateKey,
+    start_station_id,
+    end_station_id,
+    bike_number,
+    zip_code,
+    subscriber_type,
+    c_subscription_type,
+    member_birth_year,
+    member_gender,
+    bike_share_for_all_trip,
+    start_station_latitude,
+    start_station_longitude,
+    end_station_latitude,
+    end_station_longitude
+FROM [lib://DataFiles/bikeshare_trips 2.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ',', msq);
+
+// Create a table with the first trip date per user
+
+FirstTripPerUser:
+LOAD
+    user_key,
+    Min(DateKey) AS FirstTripDate
+RESIDENT bikeshare_trips_with_user
+GROUP BY user_key;
+
+// Join the FirstTripDate back to main trips
+
+LEFT JOIN (bikeshare_trips_with_user)
+LOAD
+    user_key,
+    FirstTripDate
+RESIDENT FirstTripPerUser;
+
+DROP TABLE FirstTripPerUser;
+
+///$tab BikeShare_Station_Status
+MapRegionName:
+Mapping LOAD
+    region_id,
+    name
+FROM [lib://DataFiles/bikeshare_regions.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ',', msq);
+
+ 
+
+BikeShare_Station_Info :
+LOAD
+    station_id,
+    name as station_name,
+    short_name,
+    lat,
+    lon,
+    region_id,
+    ApplyMap('MapRegionName', region_id, 'unknown') as RegionName,
+    rental_methods,
+    capacity,
+    external_id,
+    eightd_has_key_dispenser,
+    has_kiosk,
+    station_geom
+FROM [lib://DataFiles/bikeshare_station_info.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ',', msq);
+
+
+BikeShare_Station_Status:
+
+LOAD
+    *,
+    Date(Floor(Timestamp((Num(last_reported_numeric) / 86400) + 25569))) as CalendarDate_Key,
+Timestamp((Num(last_reported_numeric) / 86400) + 25569, 'YYYY-MM-DD hh:mm:ss') as LastReportedTime;
+LOAD
+    station_id,
+    num_bikes_available,
+    num_bikes_disabled,
+    num_docks_available,
+    num_docks_disabled,
+    is_installed,
+    is_renting,
+    is_returning,
+    Num(last_reported) as last_reported_numeric,
+    num_ebikes_available,
+    eightd_has_available_keys
+FROM [lib://DataFiles/bikeshare_station_status.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ',', msq);
+
+
+
+
+///$tab BikeShare_Trip
+BikeShare_Trip_Original:
+LOAD
+    trip_id,
+    duration_sec,
+    Timestamp#(Left(start_date,19),'YYYY-MM-DD hh:mm:ss') as start_date, // this step because the value of start date was not in the time format and hence i converted here for master calendar
+    start_station_name,
+    start_station_id,
+    Timestamp#(Left(end_date,19),'YYYY-MM-DD hh:mm:ss') as end_date,
+    end_station_name,
+    end_station_id,
+    bike_number,
+    zip_code,
+    subscriber_type,
+    member_birth_year,
+    member_gender,
+    bike_share_for_all_trip,
+    start_station_geom,
+    end_station_geom
+FROM [lib://DataFiles/bikeshare_trips 2.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ',', msq);
+
+
+// Join Start Station Info to Trip Table
+LEFT JOIN (BikeShare_Trip_Original)
+LOAD
+    station_id as start_station_id,
+    short_name as start_short_name,
+    region_id as start_region_id,
+    RegionName as start_RegionName,
+    has_kiosk as start_has_kiosk,
+    station_geom as start_station_geom
+RESIDENT BikeShare_Station_Info;
+
+// Join End Station Info to Trip Table
+LEFT JOIN (BikeShare_Trip_Original)
+LOAD
+    station_id as end_station_id,
+    short_name as end_short_name,
+    region_id as end_region_id,
+    RegionName as end_RegionName,
+    has_kiosk as end_has_kiosk,
+    station_geom as end_station_geom
+RESIDENT BikeShare_Station_Info;
+
+drop table BikeShare_Station_Info;
+
+
+//......................................Data Cleaning...............................................
+
+BikeShare_Trip:
+Load *,
+upper(Trim(member_gender)) as member_gender_clean,  //Cleaning Gender
+
+
+//Clean Subsciber Type
+
+If(Len(Trim(subscriber_type)) = 0 or IsNull(subscriber_type),'Others',
+If(Upper(Trim(subscriber_type))='SUBSCRIBER','Subscriber',
+    if(Upper(Trim(subscriber_type))='CUSTOMER', 'Customer','Others'))) as subscriber_type_clean,
+
+
+// Calculate Age
+Year(Today())-Num(member_birth_year) as Members_Age,
+
+// Calculate Age_Group
+If(Year(Today())-Num(member_birth_year)<=20,'Below 20',
+   If(Year(Today())-num(member_birth_year)<=30,'21-30',
+   If(Year(Today())-num(member_birth_year)<=40,'31-40',
+   If(Year(Today())-num(member_birth_year)<=50,'41-50','50+')))) as Members_Age_Group,
+
+// Extract Calendae Date 
+Date(Floor(start_date)) as CalendarDate_Key
+
+Resident  BikeShare_Trip_Original;
+
+// Drop original table to ignore synthetic key
+
+Drop table BikeShare_Trip_Original;
+
+
+
+
+
+
+
+
+
+
