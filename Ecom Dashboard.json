@@ -1,6 +1,6 @@
 
 SHEETS
-{"qInfo":{"qId":"UxWCfbZ","qType":"sheet"},"qMeta":{"title":"Home Page","description":"","_resourcetype":"app.object","_objecttype":"sheet","id":"UxWCfbZ","approved":false,"published":false,"owner":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","ownerId":"Yx2AY9D-aoqwgsC0sKfFwqdrYz_NjTRh","createdDate":"2025-06-17T05:18:03.406Z","modifiedDate":"2025-06-26T12:18:36.843Z","publishTime":true,"privileges":["read","update","delete","publish","change_owner"]},"qData":[]}
+{"qInfo":{"qId":"UxWCfbZ","qType":"sheet"},"qMeta":{"title":"Home Page","description":"","_resourcetype":"app.object","_objecttype":"sheet","id":"UxWCfbZ","approved":false,"published":true,"owner":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","ownerId":"Yx2AY9D-aoqwgsC0sKfFwqdrYz_NjTRh","createdDate":"2025-06-17T05:18:03.406Z","modifiedDate":"2025-06-26T12:18:36.843Z","publishTime":"2025-06-27T05:21:05.702Z","privileges":["read","publish","change_owner"]},"qData":[]}
 
 OBJECTS ON SHEETS
 {"name":"bUjjpu","type":"kpi","col":0,"row":0,"colspan":9,"rowspan":5,"bounds":{"y":0,"x":0,"width":25,"height":26.31578947368421}}
