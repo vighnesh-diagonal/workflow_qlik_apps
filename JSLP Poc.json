@@ -61,7 +61,7 @@ DIMENSIONS
 MEASURES
 
 VARIABLES
-{"qName":"vSpaceName","qDefinition":"='S10. Admin Review'","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"101d810e-3fb8-446a-8d53-d44bbbeb9330","qType":"variable"},"qData":[]}
+{"qName":"vSpaceName","qDefinition":"=GetSysAttr('spaceName')","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"101d810e-3fb8-446a-8d53-d44bbbeb9330","qType":"variable"},"qData":[]}
 {"qName":"vSpaceType","qDefinition":"=GetSysAttr('spaceType')","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"67c8d674-6454-418a-81cb-bfdd7bce46ab","qType":"variable"},"qData":[]}
 {"qName":"vCurrentUserID","qDefinition":"=Right(osuser(), (Len(osuser()) - Index(osuser(), '=', -1)))","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"f331c4a6-a49c-4579-8a40-ca0b79cf84d9","qType":"variable"},"qData":[]}
 {"qName":"vReviewerID","qDefinition":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c57ee115-ccc9-4ad7-8bd7-043237ce85c0","qType":"variable"},"qData":[]}
