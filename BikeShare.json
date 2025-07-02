@@ -60,11 +60,6 @@ MEASURES
 VARIABLES
 {"qName":"vMinDate","qDefinition":"41515","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"62efe577-5078-479b-bc3f-34b482cf8150","qType":"variable"},"qData":[]}
 {"qName":"vMaxDate","qDefinition":"43220","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"56cec5ad-ceb4-498e-99ba-df3ee423e230","qType":"variable"},"qData":[]}
-{"qName":"vProposerID","qDefinition":"auth0|591822e5b38ab4686468308802e04c3c57f0e9b2d8b5a607474871aeca782aac","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"1ab8d4c3-86fe-47f9-9aab-b30a31276aad","qType":"variable"},"qData":[]}
-{"qName":"vReviewerID","qDefinition":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"21de2f8f-478d-4f94-82d6-93cb53791714","qType":"variable"},"qData":[]}
-{"qName":"vCurrentUserID","qDefinition":"=Right(osuser(), (Len(osuser()) - Index(osuser(), '=', -1)))","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"2a65f71e-9cab-4186-92e8-c78a28d6e791","qType":"variable"},"qData":[]}
-{"qName":"vSpaceName","qDefinition":"=GetSysAttr('spaceName')","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"a409281f-ff74-491a-b077-1b0b39a260b1","qType":"variable"},"qData":[]}
-{"qName":"vSpaceType","qDefinition":"=GetSysAttr('spaceType')","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"399bd362-2962-4b59-8d58-99e10833b858","qType":"variable"},"qData":[]}
 
 FIELDS
 {"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":43,"qTags":["$key","$hidden","$system","$ascii","$text"],"qSrcTables":[]}
