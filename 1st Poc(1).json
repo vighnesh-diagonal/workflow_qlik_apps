@@ -1,0 +1,136 @@
+
+SHEETS
+{"qInfo":{"qId":"2cd78473-28bf-45b8-875b-60edee01a32a","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"2cd78473-28bf-45b8-875b-60edee01a32a","approved":false,"published":true,"publishTime":"2025-05-08T13:22:14.025Z","owner":"auth0|591822e5b38ab4686468308802e04c3c57f0e9b2d8b5a607474871aeca782aac","ownerId":"680888201aa2458120dcbba1","createdDate":"2025-05-08T10:06:37.021Z","modifiedDate":"2025-07-01T08:24:50.974Z","encrypted":true,"title":"Payment and Delay Monitering (1)","description":"","privileges":["read","publish"]},"qData":[]}
+{"qInfo":{"qId":"41396ac9-552b-43cd-a8aa-9f40f7967eab","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"41396ac9-552b-43cd-a8aa-9f40f7967eab","approved":false,"published":true,"publishTime":"2025-05-08T13:22:04.857Z","owner":"auth0|591822e5b38ab4686468308802e04c3c57f0e9b2d8b5a607474871aeca782aac","ownerId":"680888201aa2458120dcbba1","createdDate":"2025-05-08T09:57:02.502Z","modifiedDate":"2025-05-08T12:55:11.963Z","encrypted":true,"privileges":["read","publish"],"title":"Cadre Status and Distribution Overview (1)","description":""},"qData":[]}
+{"qInfo":{"qId":"c3d6b187-2783-4d6c-af1d-d91a8c36169c","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"c3d6b187-2783-4d6c-af1d-d91a8c36169c","approved":false,"published":false,"owner":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","ownerId":"Yx2AY9D-aoqwgsC0sKfFwqdrYz_NjTRh","createdDate":"2025-05-07T11:46:48.675Z","modifiedDate":"2025-05-07T11:54:43.316Z","encrypted":true,"privileges":["read","update","delete","publish","change_owner"],"title":"Payment and Delay Monitering (1)","description":""},"qData":[]}
+{"qInfo":{"qId":"d0624f25-3281-4823-a173-5ae9a5dad33d","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"d0624f25-3281-4823-a173-5ae9a5dad33d","approved":false,"published":false,"owner":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","ownerId":"Yx2AY9D-aoqwgsC0sKfFwqdrYz_NjTRh","createdDate":"2025-05-07T11:42:19.052Z","modifiedDate":"2025-05-07T11:46:23.303Z","encrypted":true,"privileges":["read","update","delete","publish","change_owner"],"title":"Cadre Status and Distribution Overview (1)","description":""},"qData":[]}
+{"qInfo":{"qId":"aHjtfS","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"aHjtfS","approved":false,"published":true,"publishTime":"2025-05-07T11:42:03.823Z","owner":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","ownerId":"Yx2AY9D-aoqwgsC0sKfFwqdrYz_NjTRh","createdDate":"2025-05-02T10:43:01.361Z","modifiedDate":"2025-05-07T11:42:07.856Z","encrypted":true,"privileges":["read","publish","change_owner"],"title":"Cadre Status and Distribution Overview","description":""},"qData":[]}
+{"qInfo":{"qId":"HPjTTb","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"HPjTTb","approved":false,"published":false,"owner":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","ownerId":"Yx2AY9D-aoqwgsC0sKfFwqdrYz_NjTRh","createdDate":"2025-05-05T04:21:39.036Z","modifiedDate":"2025-05-07T11:42:03.603Z","encrypted":true,"privileges":["read","update","delete","publish","change_owner"],"title":"My new sheet","description":""},"qData":[]}
+{"qInfo":{"qId":"WWVNCj","qType":"sheet"},"qMeta":{"_resourcetype":"app.object","_objecttype":"sheet","id":"WWVNCj","approved":false,"published":true,"publishTime":"2025-05-08T13:27:48.663Z","owner":"auth0|591822e5b38ab4686468308802e04c3c57f0e9b2d8b5a607474871aeca782aac","ownerId":"680888201aa2458120dcbba1","createdDate":"2025-05-07T06:43:17.037Z","modifiedDate":"2025-05-08T13:27:48.425Z","encrypted":true,"privileges":["read","publish"],"title":"Payment and Delay Monitering","description":""},"qData":[]}
+
+OBJECTS ON SHEETS
+{"name":"001b7c06-8a38-4879-ae62-880438eae3e2","type":"kpi","col":0,"row":1,"colspan":7,"rowspan":2,"bounds":{"x":0,"y":5.5555555555555545,"width":29.166666666666668,"height":11.111111111111109}}
+{"name":"55f9f7fc-f4c8-4bb5-a0f1-2f7a8b9d499d","type":"kpi","col":7,"row":1,"colspan":8,"rowspan":2,"bounds":{"x":29.166666666666668,"y":5.5555555555555545,"width":33.33333333333333,"height":11.111111111111109}}
+{"name":"15a23867-f2d1-4c95-be88-8f7a7d423118","type":"kpi","col":15,"row":1,"colspan":9,"rowspan":2,"bounds":{"x":62.5,"y":5.5555555555555545,"width":37.5,"height":11.111111111111109}}
+{"name":"c7b00b08-321c-4aa4-846e-61e47bb6b6bd","type":"linechart","col":0,"row":3,"colspan":12,"rowspan":5,"bounds":{"x":0,"y":16.666666666666668,"width":50,"height":27.777777777777782}}
+{"name":"1704762c-b0d0-4bcf-80ad-f4ad9b87bdd8","type":"barchart","col":12,"row":3,"colspan":12,"rowspan":9,"bounds":{"x":50,"y":16.666666666666668,"width":50,"height":50}}
+{"name":"a5f349af-0fbf-4eb5-8455-1cf2bb4b32e7","type":"barchart","col":0,"row":8,"colspan":12,"rowspan":4,"bounds":{"x":0,"y":44.444444444444436,"width":50,"height":22.222222222222218}}
+{"name":"c2d0ffcd-a70f-4527-b881-f477286d33a5","type":"filterpane","col":5,"row":0,"colspan":6,"rowspan":1,"bounds":{"x":20.833333333333336,"y":0,"width":25,"height":5.5555555555555545}}
+{"name":"2f1700b2-9d0a-461d-af3d-4d49a23bfd89","type":"filterpane","col":0,"row":0,"colspan":5,"rowspan":1,"bounds":{"x":0,"y":0,"width":20.833333333333336,"height":5.5555555555555545}}
+{"name":"7260ef54-7375-4d9b-9173-f5636d2741b7","type":"filterpane","col":11,"row":0,"colspan":6,"rowspan":1,"bounds":{"x":45.83333333333333,"y":0,"width":25,"height":5.5555555555555545}}
+{"name":"6a5a98fb-3f14-4c30-a638-7f3602d6ab0c","type":"filterpane","col":17,"row":0,"colspan":7,"rowspan":1,"bounds":{"x":70.83333333333334,"y":0,"width":29.166666666666668,"height":5.5555555555555545}}
+{"name":"VvcCc","type":"CheckerFlow","col":0,"row":12,"colspan":12,"rowspan":6,"bounds":{"y":66.66666666666666,"x":0,"width":50,"height":33.33333333333333}}
+{"bounds":{"y":0,"x":0,"width":20.833333333333336,"height":25},"col":0,"colspan":5,"name":"68b5be34-fb32-4410-982e-c94df3fca27c","row":0,"rowspan":3,"smartGrid":{"rowIdx":0,"itemIdx":0,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":0,"x":41.66666666666667,"width":20.833333333333336,"height":25},"col":10,"colspan":5,"name":"e1cef7c5-fc2c-4d0f-b5c8-e62d1db6f92f","row":0,"rowspan":3,"smartGrid":{"rowIdx":0,"itemIdx":2,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":25,"x":0,"width":33.33333333333333,"height":41.66666666666667},"col":0,"colspan":8,"name":"f39bc68a-678c-4d5e-a076-7d8dcdd7e144","row":3,"rowspan":5,"smartGrid":{"rowIdx":1,"itemIdx":0,"item":{"width":0.3333333333333333}},"type":"piechart"}
+{"bounds":{"y":0,"x":20.833333333333336,"width":20.833333333333336,"height":25},"col":5,"colspan":5,"name":"37983174-ff91-45e8-b6f9-854c896a9836","row":0,"rowspan":3,"smartGrid":{"rowIdx":1,"itemIdx":1,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":0,"x":62.5,"width":20.833333333333336,"height":25},"col":15,"colspan":5,"name":"f8bfeea1-ab35-4667-bacc-b81b6fa88cb8","row":0,"rowspan":3,"smartGrid":{"rowIdx":1,"itemIdx":2,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":25,"x":33.33333333333333,"width":50,"height":41.66666666666667},"col":8,"colspan":12,"name":"b17fbacc-5363-40db-bd50-7bed7b3082fa","row":3,"rowspan":5,"smartGrid":{"rowIdx":2,"itemIdx":0,"item":{"width":1}},"type":"barchart"}
+{"bounds":{"y":66.66666666666666,"x":0,"width":83.33333333333334,"height":33.33333333333333},"col":0,"colspan":20,"name":"19d23cd4-a608-4940-a552-94c1ace0b136","row":8,"rowspan":4,"smartGrid":{"rowIdx":3,"itemIdx":0,"item":{"width":1}},"type":"linechart"}
+{"name":"c60c3d1e-c6ab-453b-b78c-cb54061e20bc","type":"filterpane","col":20,"row":0,"colspan":4,"rowspan":12,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":100}}
+{"name":"5c84c566-7b96-43b3-a511-cd92865ca717","type":"kpi","col":0,"row":1,"colspan":7,"rowspan":2,"bounds":{"y":8.333333333333332,"x":0,"width":29.166666666666668,"height":16.666666666666664}}
+{"name":"204a981c-5c7a-4a2a-8b74-8e52e2a22541","type":"kpi","col":7,"row":1,"colspan":8,"rowspan":2,"bounds":{"y":8.333333333333332,"x":29.166666666666668,"width":33.33333333333333,"height":16.666666666666664}}
+{"name":"547076f1-223c-4711-af89-31aba7f019b0","type":"kpi","col":15,"row":1,"colspan":9,"rowspan":2,"bounds":{"y":8.333333333333332,"x":62.5,"width":37.5,"height":16.666666666666664}}
+{"name":"9e2ab08b-9238-41fd-9d02-6676e3746f95","type":"linechart","col":0,"row":3,"colspan":12,"rowspan":5,"bounds":{"y":25,"x":0,"width":50,"height":41.66666666666667}}
+{"name":"ab3f5b81-17c5-4c09-8eba-570898fb6fff","type":"barchart","col":12,"row":3,"colspan":12,"rowspan":9,"bounds":{"y":25,"x":50,"width":50,"height":75}}
+{"name":"0b3d3a11-7989-4fc5-b869-1db1b2611979","type":"barchart","col":0,"row":8,"colspan":12,"rowspan":4,"bounds":{"y":66.66666666666666,"x":0,"width":50,"height":33.33333333333333}}
+{"name":"27039fe0-c622-4090-9042-eb1be7a298cb","type":"filterpane","col":5,"row":0,"colspan":6,"rowspan":1,"bounds":{"y":0,"x":20.833333333333336,"width":25,"height":8.333333333333332}}
+{"name":"cf668027-838a-4c36-a93c-6702a916d845","type":"filterpane","col":0,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"31792f37-ea56-42d5-8693-4c58bd911743","type":"filterpane","col":11,"row":0,"colspan":6,"rowspan":1,"bounds":{"y":0,"x":45.83333333333333,"width":25,"height":8.333333333333332}}
+{"name":"792a72a7-90c7-4139-b102-1c2345c14cda","type":"filterpane","col":17,"row":0,"colspan":7,"rowspan":1,"bounds":{"y":0,"x":70.83333333333334,"width":29.166666666666668,"height":8.333333333333332}}
+{"bounds":{"y":0,"x":0,"width":16.666666666666664,"height":25},"col":0,"colspan":4,"name":"7c5e71a0-d642-4712-8241-b116823a716a","row":0,"rowspan":3,"smartGrid":{"rowIdx":0,"itemIdx":0,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":0,"x":16.666666666666664,"width":16.666666666666664,"height":25},"col":4,"colspan":4,"name":"699933bd-8618-4784-9042-afd65bcad2f9","row":0,"rowspan":3,"smartGrid":{"rowIdx":0,"itemIdx":1,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":0,"x":33.33333333333333,"width":16.666666666666664,"height":25},"col":8,"colspan":4,"name":"63ccbfee-4a81-4894-968b-a67dafe327db","row":0,"rowspan":3,"smartGrid":{"rowIdx":0,"itemIdx":2,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":25,"x":0,"width":33.33333333333333,"height":41.66666666666667},"col":0,"colspan":8,"name":"ee2ff2db-1809-41c5-9ea1-76dd6246fc31","row":3,"rowspan":5,"smartGrid":{"rowIdx":1,"itemIdx":0,"item":{"width":0.3333333333333333}},"type":"piechart"}
+{"bounds":{"y":0,"x":50,"width":16.666666666666664,"height":25},"col":12,"colspan":4,"name":"6d4d2814-aef2-4ee6-bfa9-15858a8b0919","row":0,"rowspan":3,"smartGrid":{"rowIdx":1,"itemIdx":1,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":0,"x":66.66666666666666,"width":16.666666666666664,"height":25},"col":16,"colspan":4,"name":"b86d663b-75c1-4857-9b8b-52d1b85cb265","row":0,"rowspan":3,"smartGrid":{"rowIdx":1,"itemIdx":2,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":25,"x":33.33333333333333,"width":50,"height":75},"col":8,"colspan":12,"name":"625a4513-fde5-4419-be52-8e86dcce3401","row":3,"rowspan":9,"smartGrid":{"rowIdx":2,"itemIdx":0,"item":{"width":1}},"type":"barchart"}
+{"bounds":{"y":66.66666666666666,"x":0,"width":33.33333333333333,"height":33.33333333333333},"col":0,"colspan":8,"name":"e2cd976f-5e0e-4d7a-b7d1-8fb4c85e52c1","row":8,"rowspan":4,"smartGrid":{"rowIdx":3,"itemIdx":0,"item":{"width":1}},"type":"linechart"}
+{"name":"3f038ef0-f131-4cbb-931a-09a9d0a5b7e9","type":"filterpane","col":20,"row":0,"colspan":4,"rowspan":12,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":100}}
+{"bounds":{"y":0,"x":0,"width":16.666666666666664,"height":25},"col":0,"colspan":4,"name":"YaMnj","row":0,"rowspan":3,"smartGrid":{"rowIdx":0,"itemIdx":0,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":0,"x":16.666666666666664,"width":16.666666666666664,"height":25},"col":4,"colspan":4,"name":"qpTmdt","row":0,"rowspan":3,"smartGrid":{"rowIdx":0,"itemIdx":1,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":0,"x":33.33333333333333,"width":16.666666666666664,"height":25},"col":8,"colspan":4,"name":"kdmUnP","row":0,"rowspan":3,"smartGrid":{"rowIdx":0,"itemIdx":2,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":25,"x":0,"width":33.33333333333333,"height":41.66666666666667},"col":0,"colspan":8,"name":"RKYfwbF","row":3,"rowspan":5,"smartGrid":{"rowIdx":1,"itemIdx":0,"item":{"width":0.3333333333333333}},"type":"piechart"}
+{"bounds":{"y":0,"x":50,"width":16.666666666666664,"height":25},"col":12,"colspan":4,"name":"JzXpZxQ","row":0,"rowspan":3,"smartGrid":{"rowIdx":1,"itemIdx":1,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":0,"x":66.66666666666666,"width":16.666666666666664,"height":25},"col":16,"colspan":4,"name":"AjpzYPU","row":0,"rowspan":3,"smartGrid":{"rowIdx":1,"itemIdx":2,"item":{"width":0.3333333333333333}},"type":"kpi"}
+{"bounds":{"y":25,"x":33.33333333333333,"width":50,"height":75},"col":8,"colspan":12,"name":"ucMzeq","row":3,"rowspan":9,"smartGrid":{"rowIdx":2,"itemIdx":0,"item":{"width":1}},"type":"barchart"}
+{"bounds":{"y":66.66666666666666,"x":0,"width":33.33333333333333,"height":33.33333333333333},"col":0,"colspan":8,"name":"etaXPaE","row":8,"rowspan":4,"smartGrid":{"rowIdx":3,"itemIdx":0,"item":{"width":1}},"type":"linechart"}
+{"name":"ZwHJPm","type":"filterpane","col":20,"row":0,"colspan":4,"rowspan":12,"bounds":{"y":0,"x":83.33333333333334,"width":16.666666666666664,"height":100}}
+{"name":"YZvSG","type":"table","col":0,"row":0,"colspan":12,"rowspan":12,"bounds":{"y":0,"x":0,"width":50,"height":100}}
+{"name":"RNJga","type":"table","col":12,"row":0,"colspan":12,"rowspan":12,"bounds":{"y":0,"x":50,"width":50,"height":100}}
+{"name":"UnFs","type":"kpi","col":0,"row":1,"colspan":7,"rowspan":2,"bounds":{"y":8.333333333333332,"x":0,"width":29.166666666666668,"height":16.666666666666664}}
+{"name":"QdnzX","type":"kpi","col":7,"row":1,"colspan":8,"rowspan":2,"bounds":{"y":8.333333333333332,"x":29.166666666666668,"width":33.33333333333333,"height":16.666666666666664}}
+{"name":"aVbyg","type":"kpi","col":15,"row":1,"colspan":9,"rowspan":2,"bounds":{"y":8.333333333333332,"x":62.5,"width":37.5,"height":16.666666666666664}}
+{"name":"jmWGzp","type":"linechart","col":0,"row":3,"colspan":12,"rowspan":5,"bounds":{"y":25,"x":0,"width":50,"height":41.66666666666667}}
+{"name":"WPpd","type":"barchart","col":12,"row":3,"colspan":12,"rowspan":9,"bounds":{"y":25,"x":50,"width":50,"height":75}}
+{"name":"JYEpSB","type":"barchart","col":0,"row":8,"colspan":12,"rowspan":4,"bounds":{"y":66.66666666666666,"x":0,"width":50,"height":33.33333333333333}}
+{"name":"XAfJZyf","type":"filterpane","col":5,"row":0,"colspan":6,"rowspan":1,"bounds":{"y":0,"x":20.833333333333336,"width":25,"height":8.333333333333332}}
+{"name":"DcckFx","type":"filterpane","col":0,"row":0,"colspan":5,"rowspan":1,"bounds":{"y":0,"x":0,"width":20.833333333333336,"height":8.333333333333332}}
+{"name":"JjNFRm","type":"filterpane","col":11,"row":0,"colspan":6,"rowspan":1,"bounds":{"y":0,"x":45.83333333333333,"width":25,"height":8.333333333333332}}
+{"name":"jmLMyjA","type":"filterpane","col":17,"row":0,"colspan":7,"rowspan":1,"bounds":{"y":0,"x":70.83333333333334,"width":29.166666666666668,"height":8.333333333333332}}
+
+DIMENSIONS
+
+MEASURES
+
+VARIABLES
+{"qName":"name","qDefinition":"Jharkhand_swalekha_data","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"d6ec1ef1-04bf-4761-a920-2bbf307538ca","qType":"variable"},"qData":[]}
+{"qName":"index","qDefinition":"0","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"d969ff22-16e4-4193-bc1a-853d29ad90e2","qType":"variable"},"qData":[]}
+{"qName":"currentName","qDefinition":"Jharkhand_swalekha_data","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"c3276be4-c6ed-484e-837c-bf258ce7e762","qType":"variable"},"qData":[]}
+{"qName":"matches","qDefinition":"0","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"ff4da2b7-46f2-4962-a05a-151826a46e82","qType":"variable"},"qData":[]}
+{"qName":"vYTD","qDefinition":"{<DisplayDate= {\"$(='>='& Date(YearStart(max(DisplayDate))) & '<=' & Date(max(DisplayDate)))\"},Year=,Month=,QuarterYear=,Quarter=,MonthYear=>}","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"894015fd-fedf-4827-ad9e-4da837eb2e84","qType":"variable"},"qData":[]}
+
+FIELDS
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":47,"qTags":["$key","$hidden","$system","$ascii","$text"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Table","qCardinal":3,"qTags":["$key","$hidden","$system","$ascii","$text"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Rows","qCardinal":3,"qTags":["$hidden","$system","$numeric","$integer"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Fields","qCardinal":3,"qTags":["$hidden","$system","$numeric","$integer"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$FieldNo","qCardinal":35,"qTags":["$hidden","$system","$numeric","$integer"],"qSrcTables":[]}
+{"qIsHidden":true,"qIsSystem":true,"qName":"$Info","qCardinal":1,"qTags":["$hidden","$system","$ascii","$text"],"qSrcTables":[]}
+{"qName":"DistrictName","qCardinal":24,"qTags":["$ascii","$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"BlockName","qCardinal":259,"qTags":["$ascii","$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Cadre ID","qCardinal":53113,"qTags":["$numeric","$integer"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Cader Name","qCardinal":48417,"qTags":[],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Cadre Designation","qCardinal":69,"qTags":["$ascii","$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Amount Recommended","qCardinal":6105,"qTags":["$numeric","$integer"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"BPM ProcessDate","qCardinal":1449,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"DelayByBPM","qCardinal":27,"qTags":["$numeric","$integer"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"DM RecommendDate","qCardinal":1421,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"DelayByDM","qCardinal":359,"qTags":["$numeric","$integer"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"DPM ApprovalDate","qCardinal":1291,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"DelayByDPM","qCardinal":52,"qTags":["$numeric","$integer"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"COO ApprovalDate","qCardinal":0,"qTags":[],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"DelayByCOO","qCardinal":1,"qTags":["$numeric","$integer"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"TotalDelay","qCardinal":209,"qTags":["$numeric","$integer"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Batch Id","qCardinal":14538,"qTags":["$numeric","$integer"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Payment ID","qCardinal":1021206,"qTags":[],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Paid Amount","qCardinal":6057,"qTags":[],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Paid AmountDate","qCardinal":1100,"qTags":["$numeric","$integer","$timestamp","$date"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Bank Account No","qCardinal":37904,"qTags":[],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"IFSC Code","qCardinal":2097,"qTags":[],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"DateKey","qCardinal":179,"qTags":["$numeric","$integer"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Application_Stage","qCardinal":5,"qTags":["$ascii","$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Cadre_Month_Key","qCardinal":554036,"qTags":["$key","$text"],"qSrcTables":["Jharkhand_swalekha","DateBridge"]}
+{"qName":"Panchayat_Name","qCardinal":3911,"qTags":["$ascii","$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"VillageName","qCardinal":15017,"qTags":["$ascii","$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Nodal","qCardinal":12,"qTags":["$ascii","$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Institution Code","qCardinal":24747,"qTags":["$numeric","$integer"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Institution Name","qCardinal":39535,"qTags":["$ascii","$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Gender","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Conact No","qCardinal":107,"qTags":["$ascii","$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Aadhaar No","qCardinal":10616,"qTags":["$ascii","$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Bank Name","qCardinal":38,"qTags":[],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Branch Name","qCardinal":1381,"qTags":["$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"Status","qCardinal":2,"qTags":["$ascii","$text"],"qSrcTables":["Jharkhand_swalekha"]}
+{"qName":"DateBridgeKey","qCardinal":20424,"qTags":["$key","$numeric","$integer"],"qSrcTables":["DateBridge","MasterCalendar"]}
+{"qName":"DateType","qCardinal":4,"qTags":["$ascii","$text"],"qSrcTables":["DateBridge"]}
+{"qName":"DisplayDate","qCardinal":20424,"qTags":["$numeric","$integer"],"qSrcTables":["MasterCalendar"]}
+{"qName":"Day","qCardinal":31,"qTags":["$numeric","$integer"],"qSrcTables":["MasterCalendar"]}
+{"qName":"Quarter","qCardinal":4,"qTags":["$numeric","$integer"],"qSrcTables":["MasterCalendar"]}
+{"qName":"QuarterYear","qCardinal":224,"qTags":["$ascii","$text"],"qSrcTables":["MasterCalendar"]}
+{"qName":"Month","qCardinal":12,"qTags":["$numeric","$integer"],"qSrcTables":["MasterCalendar"]}
+{"qName":"MonthYear","qCardinal":672,"qTags":["$numeric","$integer"],"qSrcTables":["MasterCalendar"]}
+{"qName":"MonthYear2","qCardinal":672,"qTags":["$numeric","$integer"],"qSrcTables":["MasterCalendar"]}
+{"qName":"MonthYearNum","qCardinal":672,"qTags":["$numeric","$integer"],"qSrcTables":["MasterCalendar"]}
+{"qName":"Year","qCardinal":56,"qTags":["$numeric","$integer"],"qSrcTables":["MasterCalendar"]}
+{"qName":"Fiscal Year","qCardinal":57,"qTags":["$ascii","$text"],"qSrcTables":["MasterCalendar"]}
