@@ -1,0 +1,290 @@
+///$tab Main
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyThousandSep=',';
+SET MoneyDecimalSep='.';
+SET MoneyFormat='$ ###0.00;-$ ###0.00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='DD/MM/YYYY';
+SET TimestampFormat='DD/MM/YYYY h:mm:ss[.fff] TT';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='en-US';
+SET CreateSearchIndexOnReload=1;
+SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
+SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December';
+SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
+SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday';
+SET NumericalAbbreviation='3:k;6:M;9:G;12:T;15:P;18:E;21:Z;24:Y;-3:m;-6:μ;-9:n;-12:p;-15:f;-18:a;-21:z;-24:y';
+
+
+
+
+
+///$tab Jharkhand_swalekha
+//Jharkhand Swalekha Report
+
+Jharkhand_swalekha:
+load 
+
+  "District Name"               AS DistrictName,
+    "Block Name"                  AS BlockName,
+  "Cadre ID",
+  capitalize(trim("Cadre Name"))                 AS "Cader Name",
+    "Cadre Designation"          AS "Cadre Designation",
+  "Amount Recommended",
+  Date(Date#("BPM ProcessDate", 'DD-MM-YYYY'))as "BPM ProcessDate",
+  DelayByBPM,
+  Date(Date#("DM RecommendDate", 'DD-MM-YYYY')) as "DM RecommendDate",
+  DelayByDM,
+  Date(Date#("DPM ApprovalDate", 'DD-MM-YYYY')) as "DPM ApprovalDate",
+  DelayByDPM,
+  Date(Date#("COO ApprovalDate", 'DD/MM/YYYY')) AS "COO ApprovalDate",
+  DelayByCOO,
+  
+alt(num(DelayByBPM),0) + alt(num(DelayByDM) ,0) +  alt(num(DelayByDPM) ,0) -
++  num(alt(DelayByCOO,0)) as TotalDelay,
+ 
+  
+  "Batch Id",
+  "Payment ID",
+  "Paid Amount",
+  Date(Date#("Paid AmountDate", 'DD-MM-YYYY')) as "Paid AmountDate",
+   "Bank AccountNumber"         AS "Bank Account No",
+    IFSCCode                     AS "IFSC Code",
+  date(floor(Num(Date#( Num("Month", '00')&Year, 'MMYYYY')))) as DateKey,
+'Paid' AS Application_Stage,
+    capitalize(trim("Cadre Name"))&' ' & date(floor(Num(Date#( Num("Month", '00')&Year, 'MMYYYY')))) as Cadre_Month_Key
+   
+
+FROM [lib://DataFiles/Jharkhand_swalekha_data.csv]
+(txt, codepage is 28591, embedded labels, delimiter is ',', msq);
+
+Concatenate
+///$tab Section
+//Cadre Rejection Report
+ Cader_Status:
+LOAD
+    DistrictName,
+    BlockName,
+    Panchayat_Name,
+    VillageName,
+    capitalize(trim("Cader Name")) AS "Cader Name",
+//     "Cadre Designation",
+    Nodal,
+    "Institution Code",
+    "Institution Name",
+    Gender,
+    "Conact No",
+//     Month,
+//     Year,
+    "Aadhaar No",
+    "Bank Name",
+    "Branch Name",
+    "IFSC Code",
+    "Bank Account No",
+     Status,
+    'Rejected' AS Application_Stage,
+    // Create DateKey based on multiple possible input formats
+   
+//         if(IsNull(Month), 
+date(Floor(Alt(Num(Month&Year), Num(Date#(Month&Year, 'MMM D YYYY h:mmTT')),
+Num(Date#(Month&Year, 'MMMYYYY'))))) as DateKey,
+    capitalize(trim("Cader Name"))&' '& 
+    date(Floor(Alt(Num(Month&Year), Num(Date#(Month&Year, 'MMM D YYYY h:mmTT')),
+Num(Date#(Month&Year, 'MMMYYYY'))))) AS Cadre_Month_Key
+   
+// FROM [lib://DataFiles/Cader Rejection Report30_04_2025.xlsx]
+// (ooxml, embedded labels, table is [Cader Rejection Report30_04_202]);
+    
+FROM [lib://DataFiles/Cader Rejection Report30_04_2025 1.xlsx]
+(ooxml, embedded labels, table is [Cader Rejection Report30_04_202]);
+
+//Cadre Approval Report
+CONCATENATE 
+LOAD
+    DistrictName,
+    BlockName,
+    Panchayat_Name,
+    VillageName,
+    capitalize(trim("Cader Name")) AS "Cader Name",
+//     "Cadre Designation",
+    Nodal,
+    "Institution Code",
+    "Institution Name",
+    Gender,
+//     "Month",
+//     "Year",
+    "Aadhaar No",
+    "Bank Name",
+    "Branch Name",
+    "IFSC Code",
+    "Bank Account No",
+    'Approved' AS Application_Stage,
+date(Floor(Alt(Num(Month&Year), Num(Date#(Month&Year, 'MMM D YYYY h:mmTT')),
+Num(Date#(Month&Year, 'MMMYYYY'))))) as DateKey,
+
+
+
+    capitalize(trim("Cader Name"))&' '& 
+    date(Floor(Alt(Num(Month&Year), Num(Date#(Month&Year, 'MMM D YYYY h:mmTT')),
+Num(Date#(Month&Year, 'MMMYYYY'))))) AS Cadre_Month_Key
+FROM [lib://DataFiles/Cadre Approval report30_04_2025 1.xlsx]
+(ooxml, embedded labels, table is [Cadre Approval report30_04_2025]);
+
+//Cadre Registeration Report
+
+CONCATENATE 
+LOAD
+    DistrictName,
+    BlockName,
+    Panchayat_Name,
+    VillageName,
+    capitalize(trim("Cader Name")) AS "Cader Name",
+//     "Cadre Designation",
+    Nodal,
+    "Institution Code",
+    "Institution Name",
+    Gender,
+    "Conact No",
+    "Aadhaar No",
+    "Bank Name",
+    "Branch Name",
+    "IFSC Code",
+    "Bank Account No",
+    'Registered' AS Application_Stage,
+date(Floor(Alt(Num(Month&Year), Num(Date#(Month&Year, 'MMM D YYYY h:mmTT')),
+Num(Date#(Month&Year, 'MMMYYYY'))))) as DateKey,
+    capitalize(trim("Cader Name"))&' '& 
+    date(Floor(Alt(Num(Month&Year), Num(Date#(Month&Year, 'MMM D YYYY h:mmTT')),
+Num(Date#(Month&Year, 'MMMYYYY'))))) AS Cadre_Month_Key
+
+FROM [lib://DataFiles/Cader Regestration Report30_04_2025 1.xlsx]
+(ooxml, embedded labels, table is [Cader Regestration Report30_04_]);
+
+//Cadre Pending Report
+
+CONCATENATE 
+LOAD
+    DistrictName,
+    BlockName,
+    Panchayat_Name,
+    VillageName,
+    capitalize(trim("Cader Name")) AS "Cader Name",
+//     "Cadre Designation",
+    Nodal,
+    "Institution Code",
+    "Institution Name",
+    Gender,
+    "Conact No",
+//     Month,
+//     Year,
+    "Aadhaar No",
+    "Bank Name",
+    "Branch Name",
+    "IFSC Code",
+    "Bank Account No",
+    'Pending' AS Application_Stage,
+date(Floor(Alt(Num(Month&Year), Num(Date#(Month&Year, 'MMM D YYYY h:mmTT')),
+Num(Date#(Month&Year, 'MMMYYYY'))))) as DateKey,
+    capitalize(trim("Cader Name"))&' '& 
+    date(Floor(Alt(Num(Month&Year), Num(Date#(Month&Year, 'MMM D YYYY h:mmTT')),
+Num(Date#(Month&Year, 'MMMYYYY'))))) AS Cadre_Month_Key
+  
+  
+FROM [lib://DataFiles/Cader Pending Report30_04_2025 1.xlsx]
+(ooxml, embedded labels, table is [Cader Pending Report30_04_2025]);
+
+
+
+///$tab Canonical Calendar
+DateBridge:
+Load distinct
+    Date([COO ApprovalDate]) AS DateBridgeKey,
+    'COO ApprovalDate' AS DateType,
+    [Cadre_Month_Key]  
+ Resident Jharkhand_swalekha
+ where not IsNull([COO ApprovalDate]) ;
+ 
+ 
+Load distinct
+    Date([DPM ApprovalDate]) AS DateBridgeKey,
+    'DPM ApprovalDate' AS DateType,
+    [Cadre_Month_Key]  
+ Resident Jharkhand_swalekha
+  where not IsNull([DPM ApprovalDate]) ;
+ 
+ 
+Load distinct
+    Date([DM RecommendDate]) AS DateBridgeKey,
+    'DM RecommendDate' AS DateType,
+    [Cadre_Month_Key]  
+ Resident Jharkhand_swalekha
+  where not IsNull([DM RecommendDate]) ;
+
+ 
+ 
+Load distinct
+    Date([BPM ProcessDate]) AS DateBridgeKey,
+    'BPM ProcessDate' AS DateType,
+    [Cadre_Month_Key]  
+ Resident Jharkhand_swalekha
+  where not IsNull([BPM ProcessDate]) ;
+ 
+ 
+Load distinct
+    Date([Paid AmountDate]) AS DateBridgeKey,
+    'Paid AmountDate' AS DateType,
+    [Cadre_Month_Key]  
+ Resident Jharkhand_swalekha
+  where not IsNull([Paid AmountDate]) ;
+  
+  
+  Load distinct
+    Date(DateKey) AS DateBridgeKey,
+    'Paid AmountDate' AS DateType,
+    [Cadre_Month_Key]  
+ Resident Jharkhand_swalekha
+  where not IsNull(DateKey) ;
+ 
+
+
+///$tab Master Calendar
+MasterCalendar: 
+Load 
+date(TempDate) AS DateBridgeKey,
+date(TempDate)  as DisplayDate,
+Day(TempDate)  As Day,
+ 
+Dual('Q' & ceil(month(TempDate) / 3),ceil(month(TempDate) / 3)) as Quarter,
+Dual('Q' & ceil(month(TempDate) / 3)&' '&Date(TempDate,'YY'),ceil(month(TempDate) / 3)&' '&QuarterStart(TempDate)) 	as QuarterYear,
+ 
+Month(TempDate) 							as Month, 
+Date(MonthStart(TempDate),'MMM-YY') 			as MonthYear,
+Date(MonthStart(TempDate),'MMM-YY') 			as MonthYear2,
+ 
+Date(MonthStart(TempDate),'MMM-YY')				as MonthYearNum, 
+Year(TempDate)  As Year,
+ 
+Left(Year(Yearname(TempDate,0,4)),5)&'-'&Right(Year(Yearname(TempDate,0,4))+1,2)  AS [Fiscal Year],
+;
+ 
+//=== Generate a temp table of dates === 
+LOAD 
+date(mindate + IterNo()) AS TempDate
+,maxdate // Used in InYearToDate() above, but not kept 
+WHILE mindate + IterNo() <= maxdate;
+// LOAD 
+//  date(maxdate - IterNo()+1) AS TempDate
+//  ,mindate // Used in InYearToDate() above, but not kept 
+// WHILE maxdate - IterNo() + 1 >= mindate;
+ 
+//=== Get min/max dates from Field ===/
+LOAD
+min(FieldValue('DateBridgeKey', recno()))-1 as mindate,
+max(FieldValue('DateBridgeKey', recno())) as maxdate
+AUTOGENERATE FieldValueCount('DateBridgeKey');
+///$tab exit
+// exit Script;
