@@ -58,8 +58,8 @@ DIMENSIONS
 MEASURES
 
 VARIABLES
-{"qName":"vMinDate","qDefinition":"41515","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"62efe577-5078-479b-bc3f-34b482cf8150","qType":"variable"},"qData":[]}
 {"qName":"vMaxDate","qDefinition":"43220","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"56cec5ad-ceb4-498e-99ba-df3ee423e230","qType":"variable"},"qData":[]}
+{"qName":"vMinDate","qDefinition":"41515","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"62efe577-5078-479b-bc3f-34b482cf8150","qType":"variable"},"qData":[]}
 
 FIELDS
 {"qIsHidden":true,"qIsSystem":true,"qName":"$Field","qCardinal":43,"qTags":["$key","$hidden","$system","$ascii","$text"],"qSrcTables":[]}
