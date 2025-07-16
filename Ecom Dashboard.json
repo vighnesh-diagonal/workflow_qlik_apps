@@ -66,10 +66,7 @@ DIMENSIONS
 MEASURES
 
 VARIABLES
-{"qName":"vSpaceType","qDefinition":"=GetSysAttr('spaceType')","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"de4e4419-4448-4d4a-b158-9516c7903c4c","qType":"variable"},"qData":[]}
-{"qName":"vSpaceName","qDefinition":"=GetSysAttr('spaceName')","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"6c08cd77-276a-46b2-9832-0a14dd453a1e","qType":"variable"},"qData":[]}
 {"qName":"vProposerID","qDefinition":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"041a76aa-88ea-4a77-b65e-092454de063f","qType":"variable"},"qData":[]}
-{"qName":"vCurrentUserID","qDefinition":"=Right(osuser(), (Len(osuser()) - Index(osuser(), '=', -1)))","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"09d5249b-0113-4825-a04f-900890f5269c","qType":"variable"},"qData":[]}
 {"qName":"vReviewerID","qDefinition":"auth0|f5d07675d1f28fc84dcf1f9ee8c0b8d5b1fde23b0e24969641b93a1928f9a366","qMeta":{"privileges":["read","update","delete"]},"qInfo":{"qId":"aa7f14d5-b0da-4a9e-9c98-de71b72f76fc","qType":"variable"},"qData":[]}
 
 FIELDS
